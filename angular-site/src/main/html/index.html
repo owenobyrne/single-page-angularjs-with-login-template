@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" ng-app="bupa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Realex Fire Business Account</title>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700,800' rel='stylesheet' type='text/css'>
+<link href='semantic-ui/css/semantic.min.css' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+/* CSS Reset */
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+/* CSS Reset */
+
+body {
+	font-smooth: always;
+	font-family: 'Open Sans';
+	font-size: 12pt;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	background-color: #fafafa;
+}
+
+/* Semantic-UI overrides */
+/* messages will be hidden by Angular, not Semantic */
+.ui.form .warning.message {
+	display: block;
+}
+
+.fade-enter {
+	-webkit-transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+}
+
+.fade-show {
+	-webkit-transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	opacity: 0;
+}
+
+.fade-show.fade-show-active {
+	opacity: 1;
+}
+
+.fade-hide {
+	-webkit-transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	opacity: 1;
+}
+
+.fade-hide.fade-hide-active {
+	opacity: 0;
+}
+
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script
+	src="//code.angularjs.org/1.2.0-rc.2/angular.js"></script>
+<script
+	src="//code.angularjs.org/1.2.0-rc.2/angular-resource.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.2.2/d3.v3.min.js" charset="UTF-8"></script>
+
+<script src="js/libs/later.js"></script>
+<script src="semantic-ui/javascript/semantic.min.js"></script>
+<script src="js/libs/moment.js"></script>
+<script src="js/libs/base64.js"></script>
+<script src="js/libs/md5-service.js"></script>
+<script src="js/libs/gravatar-directive.js"></script>
+<script src="js/libs/jquery.atmosphere.js"></script>
+<script	src="js/modules/angular-localstorage.js"></script>
+<script	src="js/modules/angular-ui-router-0.2.0.js"></script>
+<script src="js/modules/angular-atmosphere.js"></script>
+<script src="js/services.js"></script>
+<script src="js/application.js"></script>
+<script src="js/controllers/login_controller.js"></script>
+<script src="js/controllers/application_controller.js"></script>
+</head>
+
+<body>
+	<div ui-view="applicationview"></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<div id="loadingScreen"
+	style="position: absolute; top: 0px; bottom: 0px; width: 100%;">
+	<div style="height: 50%; width: 100%; margin-bottom: -250px;"></div>
+	<div style="height: 210px; width: 100%;">
+		<div style="width: 100%;">
+			<div style="width: 600px; margin-left: auto; margin-right: auto;">
+				<div style="width: 300px; font-weight: 300; height: 103px; padding-left: 10px; padding-top: 25px; float: left; ">
+					<div style="font-size: 16pt; line-height: 16pt;">Sign in to your</div>
+					<div style="font-size: 24pt; line-height: 24pt;">Business Account</div>
+				</div>
+				<div style="">
+					<img src="images/rxf_logo_thebetterwaytopay.png" style="width: 300px; height: 103px;"/>
+				</div>
+			</div>
+			<form ng-submit="login()">
+				<div style="width: 600px; margin-left: auto; margin-right: auto;" class="ui form segment">
+					<div class="ui warning message" ng-show="incorrectlogin">
+						<div class="header">{{errormessage}} - Try Again</div>
+					</div>
+					<div class="field">
+						<label>Business ID</label>
+						<div class="ui left labeled icon input">
+							<input type="text" name="businessid" ng-model="businessid">
+							<i class="building icon"></i>
+							<div class="ui corner label">
+								<i class="icon asterisk"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>Email</label>
+						<div class="ui left labeled icon input">
+							<input type="text" name="username" ng-model="username"> <i
+								class="user icon"></i>
+							<div class="ui corner label">
+								<i class="icon asterisk"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>Password</label>
+						<div class="ui left labeled icon input">
+							<input type="password" name="password" ng-model="password">
+							<i class="lock icon"></i>
+							<div class="ui corner label">
+								<i class="icon asterisk"></i>
+							</div>
+						</div>
+					</div>
+					<input class="ui orange submit button" type="submit" value="Login" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+
