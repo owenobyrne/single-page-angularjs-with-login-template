@@ -1,4 +1,4 @@
-angular.module('bupa', ['bupaServices', 'ngAtmosphere', 'ui.router', 'LocalStorageModule', 'ui-gravatar', 'md5'])
+angular.module('ajsspa', ['ajsspaServices', 'ui.router', 'ui-gravatar', 'LocalStorageModule'])
 	.config(['$stateProvider', '$urlRouterProvider', 
 	   function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/login"); 
@@ -52,7 +52,7 @@ angular.module('bupa', ['bupaServices', 'ngAtmosphere', 'ui.router', 'LocalStora
 	// called when the application starts up.
 	.run(function ($rootScope, $state, $stateParams, localStorageService) {
 		// set up the localStorage service.
-		localStorageService.setPrefix('bupa');
+		localStorageService.setPrefix('ajsspa');
 		
 		// make the route/template state available to everything
 	    $rootScope.$state = $state;

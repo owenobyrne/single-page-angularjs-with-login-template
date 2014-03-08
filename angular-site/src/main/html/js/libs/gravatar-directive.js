@@ -28,8 +28,10 @@ angular.module('ui-gravatar', ['md5']).
                 scope.$watch(attrs.gravatarEmail, function (value) {
                     // let's do nothing if the value comes in empty, null or undefined
                     if ((value !== null) && (value !== undefined) && (value !== '') && (null != value.match(/.*@.*\..{2}/))) {
-                        // parse the size attribute
+                    	// parse the size attribute
                         var size = attrs.gravatarSize || 40;
+                        // parse the img size attribute
+                        var imgSize = attrs.gravatarImgSize || 40;
                         // parse the ratings attribute
                         var rating = attrs.gravatarRating || 'pg';
                         // parse the default image url
@@ -39,7 +41,7 @@ angular.module('ui-gravatar', ['md5']).
                         // get image src from service
                         var src = gravatarImageService.getImageSrc(value, size, rating, defaultUrl, attrs.gravatarSecure);
                         // construct the tag to insert into the element
-                        var tag = '<img class="' + cssClass + '" src="' + src + '" >';
+                        var tag = '<img class="' + cssClass + '" src="' + src + '" width="' + imgSize + '" height="' + imgSize + '">';
                         //remove any existing imgs 
                         elm.find('img').remove();
                         // insert the tag into the element

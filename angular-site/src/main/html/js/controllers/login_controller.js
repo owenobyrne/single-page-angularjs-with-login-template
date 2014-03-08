@@ -1,7 +1,7 @@
 function LoginCtrl($scope, Session) {
-	$scope.businessid = "realex";
-	$scope.username = "owen.obyrne@realexpayments.com";
-	$scope.password = "owen";
+	$scope.businessid = "";
+	$scope.username = "";
+	$scope.password = "";
 	$scope.incorrectlogin = false;
 	$scope.errormessage = "";
 	
